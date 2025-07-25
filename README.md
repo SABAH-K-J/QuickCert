@@ -107,7 +107,7 @@ http://localhost:3000
 
 This project was built by a focused and collaborative team:
 
-* 👨‍💻 **[Sabah Razaq](https://github.com/yourusername)** – Backend Development, PDF Generation, Core Logic
+* 👨‍💻 **[Sabah K J](https://github.com/yourusername)** – Backend Development, PDF Generation, Core Logic
 * 🛠️ **Radhesyam Raghav K R** – Backend Integration, Route Management
 * 🎨 **Mohammed Farhan** – Frontend Development, UI Enhancements
 * 🖋️ **Mohammed Nowfal** – Frontend Development, Canvas & Interaction Handling
