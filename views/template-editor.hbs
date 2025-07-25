@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick-Cert | Template Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=gordita@500,700,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js"
+    ></script>
+    <link rel="stylesheet" href="/stylesheets/template-editor.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a href="/" class="logo">Quick-Cert</a>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/" class="nav-link">Features</a>
+          <a href="/" class="nav-link">How It Works</a>
+          <a href="/" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <div class="editor-container">
+        <div class="editor-controls">
+          <h1>Template Editor</h1>
+
+          <div class="control-group">
+            <label for="templateSelector">Choose Template:</label>
+            <select id="templateSelector"></select>
+            <div id="templatePreview"></div>
+            <button id="loadTemplate">Load Template</button>
+          </div>
+
+          <div class="control-group">
+            <label for="detailsFontSelector">Text Font:</label>
+            <select id="detailsFontSelector"></select>
+            <span id="detailsFontSelectorPreview">Preview: Arial</span>
+          </div>
+
+          <div class="control-group">
+            <label for="colorPicker">Select Color:</label>
+            <input type="color" id="colorPicker" value="#000000" />
+          </div>
+
+          <div class="control-group">
+            <div class="button-group">
+              <button id="addDetails">Add Text</button>
+              <button id="remove" disabled>Remove Selected</button>
+              <button id="draw">Toggle Draw</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="imageLoader">Upload Image:</label>
+            <input type="file" id="imageLoader" />
+          </div>
+
+          <div class="control-group">
+            <div class="button-group">
+              <button id="savePng" class="primary-btn">Create Multiple</button>
+              <button id="SingleCer" class="primary-btn">Create Single</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="canvas-container">
+          <div id="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/javascripts/template-editor.js"></script>
+  </body>
+</html>

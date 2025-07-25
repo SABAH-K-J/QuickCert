@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick-Cert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=gordita@500,700,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#0F172A',
+secondary: '#F8FAFC'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+html {scroll-behavior: smooth;}
+.feature-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+  border-color: rgba(15, 23, 42, 0.2);
+}
+.timeline-step::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #F8FAFC;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+.timeline-step:last-child::after {display: none;}
+.gradient-text {
+  background: linear-gradient(135deg, #0F172A 0%, #475569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+</head>
+<body class="bg-secondary">
+<nav class="fixed w-full h-[70px] bg-secondary z-50 shadow-sm">
+<div class="container mx-auto px-6 h-full flex items-center justify-between">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Quick-Cert</a>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#" class="text-primary hover:text-primary/80">Home</a>
+<a href="#features" class="text-primary hover:text-primary/80">Features</a>
+<a href="#how-it-works" class="text-primary hover:text-primary/80">How It Works</a>
+<a href="#contact" class="text-primary hover:text-primary/80">Contact</a>
+<a href="/template-editor" class="!rounded-button bg-primary text-secondary px-6 py-2 text-sm font-semibold hover:bg-primary/90 transition-all cursor-pointer">
+  Try Now
+</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-2xl text-primary"></i>
+</button>
+</div>
+</nav>
+<header class="pt-[70px] min-h-screen flex items-center">
+<div class="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="text-5xl md:text-7xl font-bold gradient-text mb-6 leading-tight">Create Professional Certificates in Minutes</h1>
+<p class="text-xl text-primary/70 mb-8 leading-relaxed">Transform your certification process with our intuitive E-Certificate Generator. Design, customize, and distribute certificates effortlessly for any occasion.</p>
+<div class="flex gap-4">
+<a href="/template-editor" class="!rounded-button bg-primary text-secondary px-8 py-4 text-lg font-semibold hover:bg-primary/90 transition-all cursor-pointer flex items-center group">
+  Get Started Now
+  <i class="ri-arrow-right-line ml-2 transition-transform group-hover:translate-x-1"></i>
+</a>
+</div>
+
+</div>
+<div class="relative">
+<div class="absolute -z-10 w-full h-full bg-gradient-to-br from-secondary/50 to-transparent rounded-3xl transform rotate-6"></div>
+<div class="bg-white p-8 rounded-3xl shadow-xl">
+<div class="relative bg-white rounded-2xl p-12 overflow-hidden">
+<div class="absolute top-4 left-4 w-24 h-24 border-t-4 border-l-4 border-primary/20"></div>
+<div class="absolute bottom-4 right-4 w-24 h-24 border-b-4 border-r-4 border-primary/20"></div>
+<div class="relative">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-['gordita'] font-bold text-primary mb-2">Certificate of Achievement</h2>
+<div class="w-16 h-0.5 bg-primary/20 mx-auto"></div>
+</div>
+<div class="text-center mb-16">
+<p class="text-primary/70 font-['gordita'] text-sm uppercase tracking-wider mb-4">This certifies that</p>
+<h3 class="text-4xl font-['gordita'] font-bold text-primary mb-6">John Anderson</h3>
+<p class="text-primary/70 font-['gordita'] text-sm uppercase tracking-wider mb-2">has successfully completed the course</p>
+<h4 class="text-2xl font-['gordita'] font-medium text-primary">Advanced Web Development</h4>
+</div>
+<div class="flex justify-between items-end mt-20">
+<div class="text-center">
+<div class="w-40 border-t border-primary/20 pt-2">
+<p class="text-xs font-['gordita'] text-primary/60 uppercase tracking-wider">Date</p>
+<p class="text-sm font-['gordita'] text-primary mt-1">March 6, 2025</p>
+</div>
+</div>
+<div class="w-20 h-20">
+<i class="ri-verified-badge-line text-5xl text-primary/20"></i>
+</div>
+<div class="text-center">
+<div class="w-40 border-t border-primary/20 pt-2">
+<p class="text-xs font-['gordita'] text-primary/60 uppercase tracking-wider">Director</p>
+<p class="text-sm font-['gordita'] text-primary mt-1">Robert Wilson</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section id="features" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<span class="text-sm font-semibold text-primary/60 uppercase tracking-wider">Why Choose Us</span>
+<h2 class="text-4xl font-bold text-primary mt-2">Key Features</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="feature-card p-8 rounded-xl bg-white transition-all duration-300">
+<div class="w-16 h-16 flex items-center justify-center mb-6">
+<i class="ri-palette-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Custom Templates</h3>
+<p class="text-primary/80">Choose from our extensive library of professional templates.</p>
+</div>
+<div class="feature-card p-8 rounded-xl bg-white transition-all duration-300">
+<div class="w-16 h-16 flex items-center justify-center mb-6">
+<i class="ri-magic-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Bulk Generation</h3>
+<p class="text-primary/80">Generate multiple certificates simultaneously using CSV file upload feature.</p>
+</div>
+<div class="feature-card p-8 rounded-xl bg-white transition-all duration-300">
+<div class="w-16 h-16 flex items-center justify-center mb-6">
+<i class="ri-edit-box-line text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Post Editing</h3>
+<p class="text-primary/80">Make adjustments and modifications to your certificates even after generation.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how-it-works" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<span class="text-sm font-semibold text-primary/60 uppercase tracking-wider">Process</span>
+<h2 class="text-4xl font-bold text-primary mt-2">How It Works</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-primary/10">
+<div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mb-6">
+<i class="ri-layout-2-line text-2xl text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">1. Select Your Template</h3>
+<p class="text-primary/80">Browse through our collection of professionally designed templates.</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-primary/10">
+<div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mb-6">
+<i class="ri-edit-2-line text-2xl text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">2. Customize Content</h3>
+<p class="text-primary/80">Add event details, customize text, upload your logo, and adjust design elements to match your brand identity.</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-primary/10">
+<div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mb-6">
+<i class="ri-share-forward-line text-2xl text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">3. Generate & Share</h3>
+<p class="text-primary/80">Download your certificates in high resolution PDF format in bulk or individually.</p>
+</div>
+</div>
+</div>
+</section>
+<footer id="contact" class="bg-gradient-to-br from-primary to-primary/90 text-secondary py-16">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-3 gap-12">
+<div>
+<h3 class="text-2xl font-['Pacifico'] mb-6">Quick-Cert</h3>
+<p class="text-secondary/80">Empowering organizations to create professional certificates efficiently and securely.</p>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-secondary/80 hover:text-secondary">About Us</a></li>
+<li><a href="#" class="text-secondary/80 hover:text-secondary">Privacy Policy</a></li>
+<li><a href="#" class="text-secondary/80 hover:text-secondary">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-6">Connect With Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center hover:bg-secondary/10 rounded-full">
+<i class="ri-twitter-fill text-xl"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center hover:bg-secondary/10 rounded-full">
+<i class="ri-linkedin-fill text-xl"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center hover:bg-secondary/10 rounded-full">
+<i class="ri-facebook-fill text-xl"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-secondary/20 text-center">
+<p class="text-secondary/60">© 2025 E-Certificate Generator. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.querySelector('button');
+const nav = document.querySelector('nav div div');
+mobileMenuBtn.addEventListener('click', () => {
+nav.classList.toggle('hidden');
+nav.classList.toggle('flex');
+nav.classList.toggle('flex-col');
+nav.classList.toggle('absolute');
+nav.classList.toggle('top-[70px]');
+nav.classList.toggle('left-0');
+nav.classList.toggle('w-full');
+nav.classList.toggle('bg-secondary');
+nav.classList.toggle('p-6');
+});
+});
+</script>
+</body>
+</html>

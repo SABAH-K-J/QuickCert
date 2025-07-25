@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick-Cert | Certificate Preview</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/previewstyle.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <div class="logo-text">Quick-Cert</div>
+      </div>
+      <div class="nav-menu">
+        <a href="/" class="nav-item">Home</a>
+        <a href="#" class="nav-item active">Features</a>
+        <a href="#" class="nav-item">How It Works</a>
+        <a href="#" class="nav-item">Contact</a>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h1>Generated PDF Certificates</h1>
+      <p class="subtitle">Preview, download, and manage the certificates you've
+        created with our certificate generator. Make any adjustments before
+        finalizing.</p>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Search certificates..."
+          onkeyup="filterCertificates()"
+        />
+      </div>
+
+      <div class="certificates" id="certificates-container">
+        {{#each certificates}}
+          <div class="certificate-card" data-name="{{this.name}}">
+            <iframe
+              class="lazy-iframe"
+              data-src="{{this.url}}"
+              title="Certificate Preview"
+            ></iframe>
+            <p>{{this.name}}</p>
+            <div class="button-container">
+              <a
+                href="{{this.url}}"
+                class="download-link"
+                target="_blank"
+              >Download</a>
+              <button
+                class="fix-button"
+                onclick="window.location.href='/preview-certificates/fix?file={{this.name}}'"
+              >Fix Details</button>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <button class="download-zip" onclick="downloadZip()">Download All as ZIP</button>
+
+      <p class="warning-text">
+        WARNING: Once downloaded as a ZIP, all the files will be deleted from
+        the system. Please ensure everything is correct before proceeding.
+      </p>
+    </div>
+
+    <script src="/javascripts/preview.js"></script>
+  </body>
+</html>

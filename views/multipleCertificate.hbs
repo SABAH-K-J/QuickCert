@@ -1,0 +1,120 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick-Cert | Multiple Certificate Generator</title>
+    <link rel="stylesheet" href="/stylesheets/certificate.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Quick-Cert</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="left-content">
+        <h2>Multiple certificate Creation</h2>
+        <p>Upload your csv file and enter the default description for the
+          certificates to be generated.</p>
+
+        <!-- Upload Form -->
+        <form id="uploadForm" action="/multiple-certificate/generate" method="post">
+          <div class="form-group">
+            <label for="eventDetails">Certificate Description:</label>
+            <textarea
+              id="eventDetails"
+              name="eventDetails"
+              required
+              placeholder="Enter certificate details..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="csvFile">Upload CSV:</label>
+            <input
+              type="file"
+              id="csvFile"
+              name="csvFile"
+              accept=".csv"
+              required
+            />
+          </div>
+
+          <button type="submit" class="generate-btn">Generate Certificates</button>
+        </form>
+      </div>
+
+      <div class="right-content">
+        <div class="certificate-preview">
+          <div class="certificate-inner">
+            <h3>Certificate of Achievement</h3>
+            <p class="certifies">THIS CERTIFIES THAT</p>
+            <p class="recipient-name">John Anderson</p>
+            <p class="completion-text">HAS SUCCESSFULLY COMPLETED THE COURSE</p>
+            <p class="course-name">Advanced Web Development</p>
+
+            <div class="certificate-footer">
+              <div class="date-section">
+                <div class="signature-line"></div>
+                <p class="label">DATE</p>
+                <p class="value">March 6, 2025</p>
+              </div>
+              <div class="verification-seal">
+                <svg viewBox="0 0 50 50" width="50" height="50">
+                  <circle
+                    cx="25"
+                    cy="25"
+                    r="20"
+                    fill="none"
+                    stroke="#ccc"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M20 25 L25 30 L35 20"
+                    stroke="#ccc"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <div class="director-section">
+                <div class="signature-line"></div>
+                <p class="label">DIRECTOR</p>
+                <p class="value">Robert Wilson</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message Section -->
+    <div id="message">
+      <center>
+        <div class="loader"></div>
+        <br />
+        <p>Generating certificates, please wait...</p>
+        <p id="funFact"></p>
+      </center>
+    </div>
+
+    <script src="/javascripts/certificate.js"></script>
+  </body>
+</html>
