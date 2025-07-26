@@ -74,7 +74,7 @@ E-Certificate Generator/
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/e-certificate-generator.git
+https://github.com/SABAH-K-J/QuickCert
 cd e-certificate-generator
 npm install
 ````
